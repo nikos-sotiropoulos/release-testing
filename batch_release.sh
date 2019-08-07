@@ -6,6 +6,21 @@ yellow=$(tput setaf 3)
 blue=$(tput setaf 44)
 reset=$(tput sgr0)
 
+for release in $(seq -w 4 26); do
+  tag="2.0.1$release"
+  filename="./releases/$tag.txt"
+  if [ -f $filename ]; then
+   printf "File $filename exists. Do the work... \n"
+   printf "Creating tag $tag... \n"
+   git tag -a $tag -m "Tag $tag is special"
+ else
+   # printf "File $filename does not exist.\n"
+   x=y
+ fi
+done
+
+exit 1
+
 version=$1
 #name=$2
 inputfile=$2
@@ -17,7 +32,7 @@ inputfile=$2
 
 text=$(cat $inputfile | tr -s '\t' ' ' | awk '{printf "%s\\n", $0}')
 echo $text
-#exit 1
+
 branch=$(git rev-parse --abbrev-ref HEAD)
 repo_full_name=$(git config --get remote.origin.url | sed 's/.*:\/\/github.com\///;s/.git$//')
 token="$GITHUB_API_TOKEN"
