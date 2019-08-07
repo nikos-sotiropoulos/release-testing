@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+### list all releases
+#curl -n  https://api.github.com/repos/nikos-sotiropoulos/release-testing/releases
+
 red=$(tput setaf 1)
 green=$(tput setaf 2)
 yellow=$(tput setaf 3)
@@ -45,5 +48,4 @@ printf "Payload is \n"
 echo $payload | jq
 # curl -X POST -sn -d "$payload" "$GITHUB_API_RELEASE_URL"
 
-curl -X PATCH -sn -d "$payload" "$GITHUB_PATCH_RELEASE_ID_URL"
-#curl -n  https://api.github.com//repos/nikos-sotiropoulos/release-testing/releases
+#curl -X PATCH -sn -d "$payload" "$GITHUB_PATCH_RELEASE_ID_URL"
