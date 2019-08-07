@@ -1,0 +1,12 @@
+- Upgrade DAML code generation to use latest version.
+- Model changes to augment the CDM product coverage for securities
+
+    Additional attributes added to `Execution`:
+	1.  `Quantity` - used to specify the transacted amount and units.
+	2.  `Price` – used to specify the price, accrued interest and traded currency. This initial implementation models the transacted dirty price as the `netPrice`  attribute, and models the difference between the clean and dirty prices as the `accruedInterest` attribute.
+	3.  `SettlementTerms` – used to specify the settlement amount and currency.
+
+	Data rules added to validate the `Execution` object for security transactions:
+	1.  Validate `partyRole` contains party references for both `PartyRoleEnum.Buyer` and `PartyRoleEnum.Seller`.
+	2.  Validate `partyRole` contains party references for both `PartyRoleEnum.ExecutingEntity` and `PartyRoleEnum.Counterparty`.
+	3.  Validate `Quantity`, `Price` and `SettlementTerms` exists.

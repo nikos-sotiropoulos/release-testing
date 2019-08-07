@@ -1,0 +1,18 @@
+**Updated Documentation**
+
+CDM Documentation as available on the portal has been *entirely* revisited. Notable changes and additions are:
+
+1. Clean separation of the documentation for the “Rosetta DSL”, which is now attached to the Rosetta DSL repo ([https://github.com/REGnosys/rosetta-dsl](https://github.com/REGnosys/rosetta-dsl)). This follows the recent open-sourcing of the Rosetta DSL, which requires an associated (and stand-alone) documentation.
+2. Update to reflect recent work on _Function Specification_, both in terms of the syntax in the Rosetta DSL documentation, and usage as part of the CDM documentation, in particular for event specifications. Function specifications have been folded as part of a broader _Function_ category in the CDM documentation, which also comprises the `calculation` components, so that the two can be compared and contrasted.
+3. Updated components diagram at the top of the documentation, aligned onto the structure of the various GitHub repos. The naming of model artefacts presented as CDM components in the diagram has been aligned onto the CDM artefacts presented in the documentation.
+4. Significantly improved readability through a combination of form and content work. Documentation has been re-designed to flow more easily by re-thinking some of the ordering and indexing and a better use of bullet points. A number of explanations have been altered or plainly re-written and some examples have been adjusted.
+5. Updated examples following recent alterations  in the model, in particular regarding the `calculation` syntax.
+6. Small update to reflect recent work on Equity Swap, with examples.
+7. Notes provided where some  re-assessment or refactoring or current status-quo should be considered.
+
+*Note*: The Rosetta DSL documentation is referred by a link in the CDM documentation. This links takes the user to a GitHub page  where documentation is displayed in a different theme than the one on the portal. More work will be  required so that both the CDM and Rosetta DSL documentations can be merged and displayed under the same page and theme in the portal.
+
+*Review directions*
+
+Go to the Documentation / ISDA CDM tile in the CDM Portal, also directly accessible here:
+[https://portal.cdm.rosetta-technology.io/modeldoc/index.html](https://portal.cdm.rosetta-technology.io/modeldoc/index.html)

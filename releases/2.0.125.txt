@@ -1,0 +1,5 @@
+**New aggregated documentation site**
+
+There is now a dedicated site for all the documentation: [https://docs.rosetta-technology.io/](https://docs.rosetta-technology.io/)
+This will eventually host all relevant documentation.
+The 'ISDA CDM' documentation link in the portal is now pointing at this site.

@@ -1,0 +1,25 @@
+**Functions UI**
+
+To better demonstrate Function Specifications or `specs` a new UI was built to demonstrate an example sequence of events that includes making use of `specs`.
+
+The Functions UI starts by loading data into a “database”, which is done by converting a set of XML or FpML documents into CDM objects. Objects in that “database” are then used to invoke spec implementations  which in turn produces further CDM objects as output.  Specs implementations can be invoked one after another to form a chain of invocations.
+
+The results of the initial data loading as well as subsequent spec invocations can be graphically visualised in a diagram that shows (in blue arcs) the Event Lineage and (in grey arrows) the essence of what each CDM object contains within it.
+
+This UI replaces the Lineage UI.
+
+*Review directions*
+
+In the Portal, see the Functions UI, in the drop-down select the `equity-swap` example. In the section labelled Sequence Data are the external FpML Equity Swaps Confirmation message, its corresponding CDM Contract object (in JSON format) and all the associated CDM objects that were extracted from that Contract.
+
+Below that, in the Invoke Function section, see the `spec` inputs and output. In parenthesis are the Global Keys of the objects being used in the function invocation. Those Global Keys will correspond to those found in the tab headings of the Sequence Data section.
+
+Invoking a function will display the result of that invocation, which will be a CDM object in JSON format. The Lineage visualisation also updates as a result, reflecting creation of new CDM objects.
+
+**Spec Implementation**
+
+Each `spec` requires an implementation and for the purposes of producing the `equity-swap` example in the Functions UI, a number of example implementations were created to demonstrate how a CDM user could choose to proceed. It highlights what logic needs to be implemented versus what is provided by the `spec` itself.
+
+*Review Directions*
+
+In the CDM Distribution pack, unzip the cdm-sources Java Archive and see folder `src/main/java/org/isda/cdm/functions/example  ` for examples of Spec Implementations.  `NewContractEvent.java` and `NewExecutionFromProduct.java` are good examples to start with. Note: take care to inspect `RosettaFunctionExamples.java` on how dependency injection is managed.

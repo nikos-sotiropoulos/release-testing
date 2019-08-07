@@ -1,0 +1,7 @@
+**Calculation Bug-Fix**
+
+Fix for the interest rate calculation page in the CDM Portal, which had recently been broken as a side-effect of other changes to the model.
+
+*Review directions*
+
+Visit the “Calculation” page in the CDM Portal and try some calculations.

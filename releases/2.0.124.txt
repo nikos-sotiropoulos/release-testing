@@ -1,0 +1,13 @@
+**Initial instalment of the reset primitive refactoring**
+
+As part of the reset primitive refactoring effort introduced at the 30 Jul Design WG meeting, the `ResetPrimitive` class is being upgraded to work with `before` and `after` attributes, in line with other primitive events.
+
+Those attributes are of (existing) `ContractState` type, which class is also being upgraded to reflect the contract lifecycle mechanism. The state contains both a reference to the original contract and a contract with reset (updated) values, both of type `Contract`. This is further completed by a resolution function: `ResolveContractState` which, given a contract state, returns a contract object  that knows how to calculate future events (like cashflows) based on the populated reset values.
+
+Further developments (not part of this release) will consolidate the mechanism by which the CDM cleanly delineates the original contract reference and the reset values (as a schedule), that are meant to be passed as inputs to the contract state resolution function. This will ensure that the CDM is designed to accommodate implementations that can optimise memory footprint. Note for instance that at present, the original contract is not passed as a reference but as the entire object, due to a technical limitation that will be lifted in a later release.
+
+Due to the fundamental change in handling of reset as a before/after, existing reset mechanism as previously demonstrated in the CDM Portal (e.g. ingestion of a reset event) has been disabled, to be replaced by a reset event process demonstration.
+
+*Review directions*
+
+Look a `ResetPrimitive`, `ContractState` and the `ResolveContractState` function spec.

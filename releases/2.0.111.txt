@@ -1,0 +1,15 @@
+**Rosetta Grammar and Code Generator support for Function Specifications.**
+
+Continuing from previous work that added support for Function Specifications or `specs` for short, the Rosetta Grammar was upgraded to support *all* the expressions required to define the `specs`  released from version 2.0.88 and onwards.
+
+Specifically, grammatical rules for `exists`, `is absent`, `contains`, `if` statements and references to other `specs` were added, making re-use of infrastructure that was in place for `data rules`.
+
+Java Code Generation support was added for `specs`. For each `spec` a corresponding abstract Java class will be generated which defines the inputs, outputs, pre-conditions and post-conditions of a function. It also asks implementors to provide a concrete implementation of an “enrichment” function that should deal aspects of CDM object construction that are not captured by the `spec` itself.
+
+Logic inside the generated Java classes reside mainly in the pre and post conditions, where code generation now supports in Java the full set of operators available in the grammar.
+
+*Review directions*
+
+In the Textual Browser, where sections of `specs` were disabled with `TODO:`s marking instances where upgrades to grammar and code generation were required.
+
+In the CDM Distribution pack, unzip the cdm-sources Java Archive and see folder `/src/generated/java/org/isda/cdm/functions` for examples of generated Java code. `NewContractEvent.java` and `QuantityChange.java` are good examples of where to start looking.

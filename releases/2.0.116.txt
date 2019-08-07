@@ -1,0 +1,12 @@
+**Further Documentation Update**
+
+Following the documentation overhaul in previous release `2.0.115`, some further upgrade has been implemented, notably:
+
+1.  Expanded explanation about the `key` implementation in the Rosetta DSL documentation. JSON snippet has been provided to illustrate implementation of the ‘internal’ and ‘external’ cross-referencing mechanism, whilst making it clear that this is part of the default Rosetta implementation but not part of the model itself (i.e. implementors can choose to do it differently and may choose to discard the ‘external’ references for instance).
+
+2.  Refactored the CDM ‘Product Model’ section to enhance explanation about the model composability.
+
+*Review directions*
+
+Go to the Documentation / ISDA CDM tile in the CDM Portal, also directly accessible here:
+[https://portal.cdm.rosetta-technology.io/modeldoc/index.html](https://portal.cdm.rosetta-technology.io/modeldoc/index.html)

@@ -1,0 +1,7 @@
+**Rosetta DSL and code generators are now public**
+
+We have made the following github repositories open source under the Apache 2.0 licence and publicly available:
+
+[https://github.com/REGnosys/rosetta-code-generators](https://github.com/REGnosys/rosetta-code-generators)
+
+[https://github.com/REGnosys/rosetta-dsl](https://github.com/REGnosys/rosetta-dsl)

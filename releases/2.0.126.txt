@@ -1,0 +1,1 @@
+Following model changes in 2.0.123, corresponding changes have been made to the `AggregationParameters`  to support  `Event` filtering for securities.

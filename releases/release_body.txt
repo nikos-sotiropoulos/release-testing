@@ -1,0 +1,1 @@
+## Hottest release *ever* !!!\r\n\r\n### Javadoc\r\n- v3.0-javadocs\r\n\r\n### Changelog\r\n- `module-spécial`: Extra hot\r\n

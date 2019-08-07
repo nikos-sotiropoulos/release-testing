@@ -1,0 +1,2 @@
+-   Two additional ISDA Create NY Law documents were added to the ingestion/isda_create menu
+-   Fix the display of portal apps based on the user’s role.
