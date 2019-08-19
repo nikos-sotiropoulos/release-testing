@@ -1,0 +1,5 @@
+A bug fix for CDM portal function example `event-sequences/equity-swap`.
+
+*Review directions*
+
+On the CDM portal Functions page, select file event-sequences > equity-swap and invoke function # 1.
